@@ -17,10 +17,10 @@ for line in sys.stdin:
 
     else:
         if current_key is not None:
-            print(current_key, current_count)
+            print(f'{current_key}\t{current_count}')
         current_key = key
         current_count = value
 if current_key is not None:
-    print(current_key, current_count)
+    print(f'{current_key}\t{current_count}')
 
 # cat credit.csv | python3 mapper.py | python3 reducer.py
